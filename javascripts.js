@@ -1,12 +1,15 @@
-let menu = document.querySelector('#men-icon');
-let navlist = document.querySelector('navlist');
+// Mobile nav toggle
+const menuIcon = document.getElementById("menu-icon");
+const navList = document.querySelector(".navlist");
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navlist.classList.toggle('open');
-};
+if (menuIcon && navList) {
+  menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("bx-x");
+    navList.classList.toggle("open");
+  });
 
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navlist.classList.remove('open');
-};
+  window.addEventListener("scroll", () => {
+    menuIcon.classList.remove("bx-x");
+    navList.classList.remove("open");
+  });
+}
